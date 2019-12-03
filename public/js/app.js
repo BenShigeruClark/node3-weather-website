@@ -16,7 +16,7 @@ weatherForm.addEventListener('submit', (e) => {
 
       // Setup call to fetch weather data using parse JSON response with conditional 
       // to print error or location and forecast data
-      fetch('http://localhost:3000/weather?address=' + location).then((response) => {
+      fetch('/weather?address=' + location).then((response) => {
       response.json().then((data) => {
           if (data.error) {
             messageOne.textContent = data.error
